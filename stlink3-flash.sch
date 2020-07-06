@@ -1,0 +1,304 @@
+EESchema Schematic File Version 4
+LIBS:stlink3-flash-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "STLINK V3 MINI FLASH"
+Date "2020-07-06"
+Rev ""
+Comp ""
+Comment1 "Piggyback board adds 16 mbyte flash to stink v3 mini"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L dk_Memory:W25Q32JVSSIQ_TR U1
+U 1 1 5EE56E4D
+P 3750 3800
+F 0 "U1" H 3950 4150 50  0000 L CNN
+F 1 "W25Q128JVSSIQ_TR" H 3950 4050 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-8_W5.6mm" H 3950 4000 60  0001 L CNN
+F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 3950 4100 60  0001 L CNN
+F 4 "W25Q32JVSSIQCT-ND" H 3950 4200 60  0001 L CNN "Digi-Key_PN"
+F 5 "W25Q32JVSSIQ TR" H 3950 4300 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 3950 4400 60  0001 L CNN "Category"
+F 7 "Memory" H 3950 4500 60  0001 L CNN "Family"
+F 8 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 3950 4600 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/winbond-electronics/W25Q32JVSSIQ-TR/W25Q32JVSSIQCT-ND/7393546" H 3950 4700 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC FLASH 32M SPI 133MHZ 8SOIC" H 3950 4800 60  0001 L CNN "Description"
+F 11 "Winbond Electronics" H 3950 4900 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3950 5000 60  0001 L CNN "Status"
+	1    3750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5EE72B77
+P 3750 4300
+F 0 "#PWR05" H 3750 4050 50  0001 C CNN
+F 1 "GND" H 3755 4127 50  0000 C CNN
+F 2 "" H 3750 4300 50  0001 C CNN
+F 3 "" H 3750 4300 50  0001 C CNN
+	1    3750 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR04
+U 1 1 5EE72F41
+P 3750 3300
+F 0 "#PWR04" H 3750 3150 50  0001 C CNN
+F 1 "+3V3" H 3765 3473 50  0000 C CNN
+F 2 "" H 3750 3300 50  0001 C CNN
+F 3 "" H 3750 3300 50  0001 C CNN
+	1    3750 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3300 3750 3400
+Wire Wire Line
+	3750 4200 3750 4300
+$Comp
+L Device:R R1
+U 1 1 5EE7A06F
+P 3150 3350
+F 0 "R1" H 3220 3396 50  0000 L CNN
+F 1 "4k7" H 3220 3305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3080 3350 50  0001 C CNN
+F 3 "~" H 3150 3350 50  0001 C CNN
+	1    3150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5EE80C0C
+P 2850 3000
+F 0 "#PWR01" H 2850 2850 50  0001 C CNN
+F 1 "+3V3" H 2865 3173 50  0000 C CNN
+F 2 "" H 2850 3000 50  0001 C CNN
+F 3 "" H 2850 3000 50  0001 C CNN
+	1    2850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 3500 3150 3600
+Wire Wire Line
+	3150 3600 3350 3600
+Wire Wire Line
+	3350 4000 2850 4000
+Wire Wire Line
+	2850 3000 2850 3100
+Wire Wire Line
+	3150 3200 3150 3100
+Wire Wire Line
+	3150 3100 3000 3100
+$Comp
+L Device:C C1
+U 1 1 5EE92989
+P 5250 3850
+F 0 "C1" H 5365 3896 50  0000 L CNN
+F 1 "100n" H 5365 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5288 3700 50  0001 C CNN
+F 3 "~" H 5250 3850 50  0001 C CNN
+	1    5250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR07
+U 1 1 5EE92BD5
+P 5250 3600
+F 0 "#PWR07" H 5250 3450 50  0001 C CNN
+F 1 "+3V3" H 5265 3773 50  0000 C CNN
+F 2 "" H 5250 3600 50  0001 C CNN
+F 3 "" H 5250 3600 50  0001 C CNN
+	1    5250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5EE93286
+P 5250 4100
+F 0 "#PWR08" H 5250 3850 50  0001 C CNN
+F 1 "GND" H 5255 3927 50  0000 C CNN
+F 2 "" H 5250 4100 50  0001 C CNN
+F 3 "" H 5250 4100 50  0001 C CNN
+	1    5250 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4100 5250 4000
+Wire Wire Line
+	5250 3600 5250 3700
+Wire Wire Line
+	3350 3700 3000 3700
+Wire Wire Line
+	3000 3700 3000 3100
+Connection ~ 3000 3100
+Wire Wire Line
+	3000 3100 2850 3100
+Wire Wire Line
+	2850 3100 2850 4000
+Connection ~ 2850 3100
+Wire Wire Line
+	2450 3800 3350 3800
+Wire Wire Line
+	2450 3900 3350 3900
+Text Label 2450 3900 0    50   ~ 0
+SPI4_SCK
+Text Label 2450 3800 0    50   ~ 0
+SPI4_MOSI
+Wire Wire Line
+	2450 3600 3150 3600
+Connection ~ 3150 3600
+Text Label 2450 3600 0    50   ~ 0
+~FLASH_CS~
+Wire Wire Line
+	4450 3800 4050 3800
+Text Label 4450 3800 2    50   ~ 0
+SPI4_MISO
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5F04C5AE
+P 6800 3750
+F 0 "J1" H 6880 3742 50  0000 L CNN
+F 1 "Conn_01x04" H 6880 3651 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 6800 3750 50  0001 C CNN
+F 3 "~" H 6800 3750 50  0001 C CNN
+	1    6800 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3950 7000 3950
+Wire Wire Line
+	7400 3850 7000 3850
+Wire Wire Line
+	7400 3750 7000 3750
+Wire Wire Line
+	7400 3650 7000 3650
+Text Label 7400 3650 2    50   ~ 0
+SPI4_MOSI
+Text Label 7400 3750 2    50   ~ 0
+SPI4_MISO
+Text Label 7400 3850 2    50   ~ 0
+~FLASH_CS~
+Text Label 7400 3950 2    50   ~ 0
+SPI4_SCK
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5F050065
+P 8650 3600
+F 0 "J5" H 8730 3642 50  0000 L CNN
+F 1 "Conn_01x01" H 8730 3551 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 8650 3600 50  0001 C CNN
+F 3 "~" H 8650 3600 50  0001 C CNN
+	1    8650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5F0502A2
+P 8650 3800
+F 0 "J6" H 8730 3842 50  0000 L CNN
+F 1 "Conn_01x01" H 8730 3751 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 8650 3800 50  0001 C CNN
+F 3 "~" H 8650 3800 50  0001 C CNN
+	1    8650 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 5F05078E
+P 8650 4000
+F 0 "J7" H 8730 4042 50  0000 L CNN
+F 1 "Conn_01x01" H 8730 3951 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 8650 4000 50  0001 C CNN
+F 3 "~" H 8650 4000 50  0001 C CNN
+	1    8650 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 5F050BC8
+P 8650 4200
+F 0 "J8" H 8730 4242 50  0000 L CNN
+F 1 "Conn_01x01" H 8730 4151 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 8650 4200 50  0001 C CNN
+F 3 "~" H 8650 4200 50  0001 C CNN
+	1    8650 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J9
+U 1 1 5F05103E
+P 8650 4400
+F 0 "J9" H 8730 4442 50  0000 L CNN
+F 1 "Conn_01x01" H 8730 4351 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 8650 4400 50  0001 C CNN
+F 3 "~" H 8650 4400 50  0001 C CNN
+	1    8650 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5F0513B9
+P 8350 4500
+F 0 "#PWR0104" H 8350 4250 50  0001 C CNN
+F 1 "GND" H 8355 4327 50  0000 C CNN
+F 2 "" H 8350 4500 50  0001 C CNN
+F 3 "" H 8350 4500 50  0001 C CNN
+	1    8350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3600 8350 3600
+Wire Wire Line
+	8350 3600 8350 3800
+Wire Wire Line
+	8450 3800 8350 3800
+Connection ~ 8350 3800
+Wire Wire Line
+	8350 3800 8350 4000
+Wire Wire Line
+	8450 4000 8350 4000
+Connection ~ 8350 4000
+Wire Wire Line
+	8350 4000 8350 4200
+Wire Wire Line
+	8450 4200 8350 4200
+Connection ~ 8350 4200
+Wire Wire Line
+	8350 4200 8350 4400
+Wire Wire Line
+	8450 4400 8350 4400
+Connection ~ 8350 4400
+Wire Wire Line
+	8350 4400 8350 4500
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5F063D51
+P 8650 3400
+F 0 "J3" H 8730 3442 50  0000 L CNN
+F 1 "Conn_01x01" H 8730 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x01_P1.27mm_Vertical" H 8650 3400 50  0001 C CNN
+F 3 "~" H 8650 3400 50  0001 C CNN
+	1    8650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5F06415A
+P 8350 3300
+F 0 "#PWR0101" H 8350 3150 50  0001 C CNN
+F 1 "+3V3" H 8365 3473 50  0000 C CNN
+F 2 "" H 8350 3300 50  0001 C CNN
+F 3 "" H 8350 3300 50  0001 C CNN
+	1    8350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3300 8350 3400
+Wire Wire Line
+	8350 3400 8450 3400
+$EndSCHEMATC
