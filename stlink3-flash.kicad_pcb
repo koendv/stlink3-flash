@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.2032)
+    (last_trace_width 0.25)
     (user_trace_width 0.2032)
     (trace_clearance 0.2)
     (zone_clearance 0.254)
@@ -484,7 +484,7 @@
     (model ${KISYS3DMOD}/Package_SO.3dshapes/SOIJ-8_5.3x5.3mm_P1.27mm.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
+      (rotate (xyz 0 0 -90))
     )
   )
 
